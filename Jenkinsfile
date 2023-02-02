@@ -7,11 +7,11 @@ pipeline {
         disableConcurrentBuilds()
     }
 
-    environment{
-        SSH_KEY = credentials('sshkey')
-        DOCKERHUB_CREDENTIALS = credentials('abdullahcodes-dockerhub')
+    // environment{
+    //     SSH_KEY = credentials('sshkey')
+    //     DOCKERHUB_CREDENTIALS = credentials('abdullahcodes-dockerhub')
 
-    }
+    // }
     
 	
 
