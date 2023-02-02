@@ -6,6 +6,6 @@ cp StatefulSet.yaml.template StatefulSet.yaml
 
 sed -i "s/build/$BUILD_NUMBER/g" StatefulSet.yaml
 
-#Deployment of nginx statfulset
+echo "Deployment of nginx statfulset"
 
 kubectl apply -f StatefulSet.yaml
