@@ -1,13 +1,11 @@
 
 #!/bin/bash
 
+echo "Copying and changing Statefulset file with build number"
+cp StatefulSet.yaml.template StatefulSet.yaml
 
-
-echo "copiyng and chaging docker-compose-file with build number"
-cp nginx-statfulset.yaml.template nginx-statfulset.yaml
-
-sed -i "s/build/$BUILD_NUMBER/g" nginx-statfulset.yaml.template
+sed -i "s/build/$BUILD_NUMBER/g" StatefulSet.yaml
 
 #Deployment of nginx statfulset
 
-kubectl apply -f nginx-statfulset.yaml
+kubectl apply -f StatefulSet.yaml
