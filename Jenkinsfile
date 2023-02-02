@@ -36,7 +36,7 @@ pipeline {
 
         stage('Deploy'){
             steps {
-                sh 'chmod +x -R ${env.WORKSPACE}'
+                sh 'chmod +x -R ${WORKSPACE}'
                 sh './deployment.sh'
             }
         }
