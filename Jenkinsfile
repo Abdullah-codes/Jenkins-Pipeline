@@ -9,7 +9,7 @@ pipeline {
 
     environment{
         
-        DOCKERHUB_CREDENTIALS = credentials('abdullahcodes-dockerhub')
+        DOCKERHUB_CREDENTIALS = credentials('***Your-docker-repo***-dockerhub')
 
     }
     
@@ -18,7 +18,7 @@ pipeline {
     stages {
         stage('Docker-build'){
             steps {
-                sh 'docker build -t abdullahcodes/nginx-1-19:${BUILD_NUMBER} ./app'
+                sh 'docker build -t ***Your-docker-repo***/nginx-1-19:${BUILD_NUMBER} ./app'
             }
         }
 
@@ -30,7 +30,7 @@ pipeline {
 
         stage('Docker-push'){
             steps {
-                sh 'docker push abdullahcodes/nginx-1-19:${BUILD_NUMBER}'
+                sh 'docker push ***Your-docker-repo***/nginx-1-19:${BUILD_NUMBER}'
             }
         }
 

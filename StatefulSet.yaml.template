@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: my-container
-        image: abdullahcodes/nginx-1-19:build
+        image: **Your-Image-name**/nginx-1-19:build
         ports:
         - containerPort: 80
         resources:
